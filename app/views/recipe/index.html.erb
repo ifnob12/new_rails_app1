@@ -1,0 +1,27 @@
+<h1>Searching for - <%= @search_term %></h1>
+<h6>THIS PAGE IS SO UGLY!!! I must redesign it!</h6>
+
+<table border="1">
+	<tr>
+		<th>Publisher</th>
+		<th>f2f_url</th>
+		<th>Title</th>
+<!-- 		<th>Source Url</th>
+		<th>Recipe Id</th>
+		<th>Image</th>
+		<th>Social Rank</th>
+		<th>Publisher URL</th> -->
+	</tr>
+	<% @recipes.each do |recipe| %>
+	<tr>
+		<td><%= recipe["publisher"]%></td>
+		<td><a href=<%= recipe["f2f_url"]%>>Face-to-Face</a></td>
+		<td><%= recipe["title"]%></td>
+<!-- 		<td><a href=<%= recipe["source_url"]%>>Got to Source</a></td>
+		<td><%= recipe["recipe_id"]%></td>
+		<td><%= image_tag(recipe["image_url"])%></td>
+		<td><%= recipe["social_rank"]%></td>
+		<td><a href=<%= recipe["publisher_url"]%>>Got to Publisher</a></td> -->
+	</tr>
+	<% end %>
+</table>
